@@ -93,7 +93,7 @@ class HomeView extends GetView<HomeController> {
                           Get.toNamed(Routes.DASHBOARD);
                         }),
                         Text(
-                          'oR',
+                          'OR',
                           style: MyTheme.regularTextStyle(
                               textSize: Get.height * .019,
                               fontWeight: FontWeight.w400),
