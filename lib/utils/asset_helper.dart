@@ -24,5 +24,5 @@ abstract class AssetHelper {
 
 //--------------------------------------------------
 
-  static get SalesExecutive=> Image('SalesExecutive.jpg');
+  static get SalesExecutive=> Image('Salesexecutive.png');
 }

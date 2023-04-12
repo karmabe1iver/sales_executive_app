@@ -27,12 +27,15 @@ Widget CustomCard({AssetHelperImag, titile, onTap, scale}) {
           SizedBox(
             height: 10,
           ),
-          Text(
-            '$titile',
-            style: TextStyle(
-              fontFamily: 'Poppins',
-              fontWeight: FontWeight.w400,
-              color: Colors.black,
+          FittedBox(
+            child: Text(
+              '$titile',
+              style: TextStyle(
+                fontSize: Get.height*.018,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+              ),
             ),
           )
         ],

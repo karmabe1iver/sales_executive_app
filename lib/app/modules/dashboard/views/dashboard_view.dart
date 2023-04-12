@@ -21,10 +21,10 @@ class DashboardView extends GetView<DashboardController> {
           color: MyTheme.white,
           child: Padding(
             padding:
-                EdgeInsets.only(top: Get.height * .4, left: Get.width * .08),
+                EdgeInsets.only(top: Get.height * .4, left: Get.width * .085,),
             child: Wrap(
-              spacing: 32,
-              runSpacing: 24,
+              spacing: Get.width*.085,
+              runSpacing: Get.height*.028,
               children: [
                 CustomCard(
                     AssetHelperImag: AssetHelper.ProfileDp,
@@ -62,9 +62,7 @@ class DashboardView extends GetView<DashboardController> {
             ),
           ),
         ),
-
         /// Cards Section ends
-
         ///Head Section
         Container(
           height: Get.height * .35,
@@ -80,13 +78,13 @@ class DashboardView extends GetView<DashboardController> {
                 Stack(
                   children: [
                     CircleAvatar(
-                      radius: 80,
+                      radius: Get.height*.090,
                       backgroundColor: Colors.transparent,
                       child: CircleAvatar(
-                        radius: 65,
+                        radius: Get.height*.075,
                         backgroundColor: MyTheme.white,
                         child: CircleAvatar(
-                          radius: 60,
+                          radius: Get.height*.070,
                           backgroundColor: MyTheme.white,
                           foregroundImage: AssetImage(
                             AssetHelper.Dp,
@@ -95,13 +93,13 @@ class DashboardView extends GetView<DashboardController> {
                       ),
                     ),
                     Positioned(
-                      bottom: 30,
-                      right: -20,
+                      bottom:Get.height*.030,
+                      right:-25,
                       child: RawMaterialButton(
                         onPressed: () {},
                         elevation: 6.0,
                         fillColor: MyTheme.white,
-                        child: Image.asset(AssetHelper.UpdateDpIcon),
+                        child: Image.asset(AssetHelper.UpdateDpIcon,scale: 1,),
                         shape: CircleBorder(),
                       ),
                     ),
@@ -118,7 +116,6 @@ class DashboardView extends GetView<DashboardController> {
             ),
           ),
         ),
-
         ///Head Section Ends
       ],
     ));

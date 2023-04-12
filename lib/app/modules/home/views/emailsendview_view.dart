@@ -18,7 +18,7 @@ class EmailsendviewView extends GetView {
             width: Get.width,
             color: MyTheme.primaryColor,
             child: Opacity(
-              opacity: .1,
+              opacity: .8,
               child: Image.asset(
                 AssetHelper.SalesExecutive,
                 fit: BoxFit.fill,
