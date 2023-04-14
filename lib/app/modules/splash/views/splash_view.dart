@@ -55,7 +55,7 @@ class _SpalshScreenState extends State<SpalshScreen> {
                   'SALES EXECUTIVE APP',
                   style: MyTheme.regularTextStyle(
                       color: MyTheme.white,
-                      textSize: 33,
+                      textSize: Get.height*.033,
                       fontWeight: FontWeight.w700),
                 ),
               ),
