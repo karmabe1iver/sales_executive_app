@@ -63,9 +63,12 @@ class ForgotPasswordView extends GetView {
                     SizedBox(
                       height: Get.height * .07,
                     ),
-                    CustomButton(buttonText: 'Send Mail', onpressed: (){
-                      Get.to(EmailsendviewView());
-                    })
+                    CustomButton(
+                      buttonText: 'Send Mail',
+                      onpressed: () {
+                        Get.to(EmailsendviewView());
+                      },
+                    ),
                   ],
                 ),
               ),
