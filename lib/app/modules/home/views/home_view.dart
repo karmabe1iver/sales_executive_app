@@ -14,6 +14,8 @@ class HomeView extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
+
         body: Stack(
       children: [
         Container(
@@ -83,7 +85,8 @@ class HomeView extends GetView<HomeController> {
                     ),
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(top:Get.height*.028),
+                    padding:  EdgeInsets.only(top:Get.height*.028,
+                    bottom: MediaQuery.of(context).viewInsets.top),
                     child: Wrap(
                       spacing: Get.height * .01,
                       direction: Axis.vertical,
