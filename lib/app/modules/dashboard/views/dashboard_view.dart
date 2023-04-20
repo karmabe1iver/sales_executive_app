@@ -20,11 +20,13 @@ class DashboardView extends GetView<DashboardController> {
           width: Get.width,
           color: MyTheme.white,
           child: Padding(
-            padding:
-                EdgeInsets.only(top: Get.height * .4, left: Get.width * .085,),
+            padding: EdgeInsets.only(
+              top: Get.height * .4,
+              left: Get.width * .085,
+            ),
             child: Wrap(
-              spacing: Get.width*.085,
-              runSpacing: Get.height*.028,
+              spacing: Get.width * .085,
+              runSpacing: Get.height * .028,
               children: [
                 CustomCard(
                     AssetHelperImag: AssetHelper.ProfileDp,
@@ -62,6 +64,7 @@ class DashboardView extends GetView<DashboardController> {
             ),
           ),
         ),
+
         /// Cards Section ends
         ///Head Section
         Container(
@@ -78,13 +81,13 @@ class DashboardView extends GetView<DashboardController> {
                 Stack(
                   children: [
                     CircleAvatar(
-                      radius: Get.height*.090,
+                      radius: Get.height * .090,
                       backgroundColor: Colors.transparent,
                       child: CircleAvatar(
-                        radius: Get.height*.075,
+                        radius: Get.height * .075,
                         backgroundColor: MyTheme.white,
                         child: CircleAvatar(
-                          radius: Get.height*.070,
+                          radius: Get.height * .070,
                           backgroundColor: MyTheme.white,
                           foregroundImage: AssetImage(
                             AssetHelper.Dp,
@@ -93,14 +96,88 @@ class DashboardView extends GetView<DashboardController> {
                       ),
                     ),
                     Positioned(
-                      bottom:Get.height*.030,
-                      right:-25,
+                      bottom: Get.height * .030,
+                      right: -25,
                       child: RawMaterialButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.bottomSheet(BottomSheet(
+                              onClosing: () {
+                                Get.back();
+                              },
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20),
+                              )),
+                              builder: (BuildContext) {
+                                return Container(
+                                  height: Get.height * .15,
+                                  child: Padding(
+                                    padding:  EdgeInsets.only(left:Get.width*.05,right: Get.width*.05),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              "Profile Photo",
+                                              style: MyTheme.regularTextStyle(
+                                                color: MyTheme.brown,
+                                                textSize: 20,
+                                                fontWeight: FontWeight.w900,
+                                              ),
+                                            ),
+                                            Icon(
+                                              Icons.delete,
+                                              color: Colors.grey,
+                                            )
+                                          ],
+                                        ),
+                                        Wrap(
+                                          runSpacing: 30,
+                                          spacing: 50,
+                                          children: [
+                                            CircleAvatar(
+                                              backgroundColor:
+                                                  MyTheme.darkblue,
+                                              child: IconButton(
+                                                  onPressed: () {
+                                                    controller.getImageCam();
+                                                    Get.back();
+                                                  },
+                                                  icon: Icon(Icons
+                                                      .camera_alt_rounded)),
+                                            ),
+                                            CircleAvatar(
+                                              backgroundColor:
+                                                  MyTheme.darkblue,
+                                              child: IconButton(
+                                                  onPressed: () {
+                                                    controller.getImage();
+                                                    Get.back();
+                                                  },
+                                                  icon: Icon(Icons.photo)),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }));
+                        },
                         elevation: 6.0,
                         fillColor: MyTheme.white,
-                        child: Image.asset(AssetHelper.UpdateDpIcon,scale: 1,),
-                        shape: CircleBorder(),
+                        shape: const CircleBorder(),
+                        child: Image.asset(
+                          AssetHelper.UpdateDpIcon,
+                          scale: 1,
+                        ),
                       ),
                     ),
                   ],
@@ -116,6 +193,7 @@ class DashboardView extends GetView<DashboardController> {
             ),
           ),
         ),
+
         ///Head Section Ends
       ],
     ));

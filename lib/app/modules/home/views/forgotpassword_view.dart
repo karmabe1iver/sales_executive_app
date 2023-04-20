@@ -32,18 +32,19 @@ class ForgotPasswordView extends GetView {
                       fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  'ENTER YOUR EMAIL ADDRESS AND \n    WE WOULD SEND YOU A LINK\n      TO REST YOUR PASSWORD',
+                  'ENTER YOUR EMAIL ADDRESS AND \n WE WOULD SEND YOU A LINK \n TO REST YOUR PASSWORD',
                   maxLines: 3,
                   style: MyTheme.regularTextStyle(
                       color: MyTheme.white,
                       textSize: Get.height * .019,
                       fontWeight: FontWeight.w600),
+                  textAlign: TextAlign.center,
                 )
               ],
             ),
           ),
           Positioned(
-            height: Get.height * .65,
+            height: Get.height * .67,
             bottom: 0,
             child: Container(
               height: Get.height * .65,
