@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 class DashboardController extends GetxController {
+  Rx<File?> image = File('super').obs;
   Future getImage() async {
     try {
        var imagepicked = await ImagePicker();
@@ -12,10 +13,10 @@ class DashboardController extends GetxController {
         imageQuality: 100,
       );
       File file = File(pickedFile!.path);
-      //image = await ImagePicker().pickImage(source: ImageSource.gallery);
+      // image = await ImagePicker().pickImage(source: ImageSource.gallery);
       // XFile?  image1 = await imagepicked.pickImage(source: ImageSource.camera);
 
-    //   image.value = file;
+      image.value = file;
     //   ProfileList.add(ProfileModel(
     //     profilePic: image.value!,
     //   ));
