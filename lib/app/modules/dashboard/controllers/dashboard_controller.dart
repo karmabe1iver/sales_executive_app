@@ -1,9 +1,13 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../../../utils/asset_helper.dart';
+
 class DashboardController extends GetxController {
+  Rx<bool> status = false.obs;
   Rx<File?> image = File('super').obs;
   Future getImage() async {
     try {
@@ -22,11 +26,11 @@ class DashboardController extends GetxController {
     //   ));
     //   print('p: ${ProfileList.length}');
     //   print('p: ${ProfileList.last.profilePic}');
-    //   if (file != null) {
-    //     status.value = true;
-    //   }
+      if (file != null) {
+        status.value = true;
+      }
     } catch (e) {
-      //Image.asset(AssetHelper.profileIMAGE);
+      Image.asset(AssetHelper.Dp);
     }
     // print('Image Path $image');
   }
@@ -42,7 +46,7 @@ class DashboardController extends GetxController {
     //image = await ImagePicker().pickImage(source: ImageSource.gallery);
     // XFile?  image1 = await imagepicked.pickImage(source: ImageSource.camera);
 
-    // image.value = file;
+    image.value = file;
     // ProfileList.add(ProfileModel(
     //   profilePic: image.value!,
     // ));
