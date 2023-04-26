@@ -7,7 +7,8 @@ import '../utils/my_theme.dart';
 class CustomButton extends StatelessWidget {
   String buttonText;
   final   onpressed;
-   CustomButton({Key? key,required this.buttonText,required this.onpressed}) : super(key: key);
+   late final width;
+   CustomButton({Key? key,required this.buttonText,required this.onpressed, this.width}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onpressed,
       child: Container(
         height: Get.height * .058,
-        width: Get.width * .4,
+        width:width==null? Get.width * .4:width,
         decoration: BoxDecoration(
           borderRadius:
           BorderRadius.only(topLeft: Radius.circular(60)),

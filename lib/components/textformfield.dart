@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 import '../utils/my_theme.dart';
 
 class CustomTextFormField extends StatelessWidget {
   String HintText;
-  CustomTextFormField({Key? key, required this.HintText}) : super(key: key);
+  late final textsize;
+  CustomTextFormField({Key? key, required this.HintText,this.textsize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,9 @@ class CustomTextFormField extends StatelessWidget {
           hintText: HintText,
           focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(color: MyTheme.blue))),
-      style: MyTheme.regularTextStyle(color: MyTheme.brown),
+      style: MyTheme.regularTextStyle(
+          textSize:textsize==null?Get.height*.018:textsize ,
+          color: MyTheme.brown),
       cursorColor: MyTheme.blue,
     );
   }

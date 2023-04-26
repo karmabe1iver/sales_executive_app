@@ -21,8 +21,11 @@ abstract class AssetHelper {
 
   static get CheckerIcon => Icon('CheckerIcon.png');
 
+  static get Edit => Icon('EditPorfile.png');
+
+  static get Cancel => Icon('cancel.png');
 
 //--------------------------------------------------
 
-  static get SalesExecutive=> Image('Salesexecutive.png');
+  static get SalesExecutive => Image('Salesexecutive.png');
 }

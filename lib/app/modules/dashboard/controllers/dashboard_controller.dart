@@ -17,20 +17,20 @@ class DashboardController extends GetxController {
         imageQuality: 100,
       );
       File file = File(pickedFile!.path);
-      // image = await ImagePicker().pickImage(source: ImageSource.gallery);
-      // XFile?  image1 = await imagepicked.pickImage(source: ImageSource.camera);
+      //image.value = await ImagePicker().pickImage(source: ImageSource.gallery);
+      //XFile?  image1 = await imagepicked.pickImage(source: ImageSource.camera);
 
       image.value = file;
     //   ProfileList.add(ProfileModel(
     //     profilePic: image.value!,
     //   ));
-    //   print('p: ${ProfileList.length}');
-    //   print('p: ${ProfileList.last.profilePic}');
+      print('p: ${file.length}');
+      //print('p: ${ProfileList.last.profilePic}');
       if (file != null) {
         status.value = true;
       }
     } catch (e) {
-      Image.asset(AssetHelper.Dp);
+     // Image.asset(AssetHelper.Dp);
     }
     // print('Image Path $image');
   }

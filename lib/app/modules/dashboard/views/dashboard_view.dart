@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sales_executive_app/app/routes/app_pages.dart';
 import 'package:sales_executive_app/components/custombuttomsheet.dart';
 import 'package:sales_executive_app/components/customcard.dart';
 import 'package:sales_executive_app/utils/asset_helper.dart';
@@ -32,7 +33,9 @@ class DashboardView extends GetView<DashboardController> {
                 CustomCard(
                     AssetHelperImag: AssetHelper.ProfileDp,
                     titile: 'Personal Details',
-                    onTap: () {}),
+                    onTap: () {
+                      Get.toNamed(Routes.PROFILE_DETAILS);
+                    }),
                 CustomCard(
                     AssetHelperImag: AssetHelper.CheckerIcon,
                     titile: 'Sale OverView',
@@ -92,7 +95,7 @@ class DashboardView extends GetView<DashboardController> {
                             radius: Get.height * .070,
                             backgroundColor: MyTheme.white,
                             child: ClipOval(
-                              child: controller.status.value != false
+                              child: controller.status.value!= false
                                   ? Image.file(
                                       controller.image.value!,
                                       fit: BoxFit.cover,
@@ -136,7 +139,6 @@ class DashboardView extends GetView<DashboardController> {
             ),
           ),
         ),
-
         ///Head Section Ends
       ],
     ));

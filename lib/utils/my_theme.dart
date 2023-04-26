@@ -12,7 +12,7 @@ class MyTheme {
       {Color? color,
       double? textSize,
       FontWeight? fontWeight,
-      double? letterSpacing}) {
+      double? letterSpacing, }) {
     return TextStyle(
       fontFamily: 'Poppins',
       color: color ?? Colors.black,

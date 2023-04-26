@@ -9,7 +9,8 @@ Widget CustomCard({AssetHelperImag, titile, onTap, scale}) {
       height: Get.mediaQuery.size.height * .12,
       width: Get.mediaQuery.size.width * .38,
       decoration:
-      BoxDecoration(borderRadius:BorderRadius.only(topLeft: Radius.circular(60)), boxShadow: [
+      BoxDecoration(borderRadius:BorderRadius.only(topLeft: Radius.circular(60)),
+          boxShadow: [
         BoxShadow(
           offset: Offset.zero,
           color: Colors.grey.shade300,
