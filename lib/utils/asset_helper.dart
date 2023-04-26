@@ -17,13 +17,17 @@ abstract class AssetHelper {
 
   static get RoundedCorrect => Icon('RoundedCorrect.png');
 
-  static get UpdateDpIcon => Icon('UpdateDpIcon.png');
+  static get UpdateDpIcon => Icon('camera.png');
 
   static get CheckerIcon => Icon('CheckerIcon.png');
 
   static get Edit => Icon('EditPorfile.png');
 
   static get Cancel => Icon('cancel.png');
+
+  static get Goals => Icon('Goals.png');
+
+  static get Activities => Icon('Activities.png');
 
 //--------------------------------------------------
 

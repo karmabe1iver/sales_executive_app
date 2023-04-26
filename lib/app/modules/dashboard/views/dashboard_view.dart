@@ -41,11 +41,11 @@ class DashboardView extends GetView<DashboardController> {
                     titile: 'Sale OverView',
                     onTap: () {}),
                 CustomCard(
-                    AssetHelperImag: AssetHelper.ProfileDp,
+                    AssetHelperImag: AssetHelper.Activities,
                     titile: 'Sales Activities',
                     onTap: () {}),
                 CustomCard(
-                    AssetHelperImag: AssetHelper.CheckerIcon,
+                    AssetHelperImag: AssetHelper.Goals,
                     titile: 'Sales Goal',
                     onTap: () {}),
                 CustomCard(
