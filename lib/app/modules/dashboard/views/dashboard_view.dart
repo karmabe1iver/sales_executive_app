@@ -50,12 +50,17 @@ class DashboardView extends GetView<DashboardController> {
                     onTap: () {}),
                 CustomCard(
                     AssetHelperImag: AssetHelper.ProfileDp,
-                    titile: 'Personal Details',
-                    onTap: () {}),
+                    titile: 'Add Shop',
+                    onTap: () {
+                      Get.toNamed(Routes.ADD_SHOP);
+                    }),
                 CustomCard(
                     AssetHelperImag: AssetHelper.CheckerIcon,
-                    titile: 'Sale OverView',
-                    onTap: () {}),
+                    titile: 'Shop View',
+                    onTap: () {
+                      Get.toNamed(Routes.SHOP_LIST);
+
+                    }),
                 CustomCard(
                     AssetHelperImag: AssetHelper.ProfileDp,
                     titile: 'Sales Activities',

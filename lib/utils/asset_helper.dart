@@ -29,6 +29,12 @@ abstract class AssetHelper {
 
   static get Activities => Icon('Activities.png');
 
+  static get Shop => Icon('shop.png');
+
+  static get ShopList => Icon('shoplist_icon.png');
+
+  static get Search => Icon('search.png');
+
 //--------------------------------------------------
 
   static get SalesExecutive => Image('Salesexecutive.png');

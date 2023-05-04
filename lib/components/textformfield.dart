@@ -7,7 +7,9 @@ import '../utils/my_theme.dart';
 class CustomTextFormField extends StatelessWidget {
   String HintText;
   late final textsize;
-  CustomTextFormField({Key? key, required this.HintText,this.textsize}) : super(key: key);
+  late final color;
+
+  CustomTextFormField({Key? key, required this.HintText,this.textsize,this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class CustomTextFormField extends StatelessWidget {
               borderSide: BorderSide(color: MyTheme.blue))),
       style: MyTheme.regularTextStyle(
           textSize:textsize==null?Get.height*.018:textsize ,
-          color: MyTheme.brown),
+          color:color==null? MyTheme.brown:color),
       cursorColor: MyTheme.blue,
     );
   }

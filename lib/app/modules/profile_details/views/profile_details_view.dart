@@ -89,7 +89,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsets.all(
-                                                      18.0,
+                                                      8.0,
                                                     ),
                                                     child: Column(
                                                       crossAxisAlignment:
@@ -129,6 +129,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                                                   color: MyTheme
                                                                       .darkblue),
                                                         ),
+                                                        SizedBox(height: Get.height*.02,),
                                                         Padding(
                                                           padding:
                                                               EdgeInsets.only(
@@ -164,6 +165,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                                               Get.height * .02,
                                                         ),
                                                         CustomButton(
+                                                           height: Get.height*.068,
                                                             width:
                                                                 Get.width * .45,
                                                             buttonText:
@@ -171,7 +173,7 @@ class ProfileDetailsView extends GetView<ProfileDetailsController> {
                                                             onpressed: () {}),
                                                         SizedBox(
                                                           height:
-                                                              Get.height * .02,
+                                                              Get.height * .03,
                                                         ),
                                                       ],
                                                     ),

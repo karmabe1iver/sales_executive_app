@@ -8,7 +8,10 @@ class CustomButton extends StatelessWidget {
   String buttonText;
   final   onpressed;
    late final width;
-   CustomButton({Key? key,required this.buttonText,required this.onpressed, this.width}) : super(key: key);
+   late final height;
+   late final textsize;
+
+   CustomButton({Key? key,required this.buttonText,required this.onpressed, this.width,this.height,this.textsize}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,11 +19,11 @@ class CustomButton extends StatelessWidget {
       style: ButtonStyle(overlayColor:MaterialStateProperty.all(Colors.transparent)),
       onPressed: onpressed,
       child: Container(
-        height: Get.height * .058,
+        height:height==null? Get.height * .058:height,
         width:width==null? Get.width * .4:width,
         decoration: BoxDecoration(
           borderRadius:
-          BorderRadius.only(topLeft: Radius.circular(60)),
+          BorderRadius.only(topLeft: Radius.circular(50)),
           color: MyTheme.darkblue,
         ),
         child: Center(
@@ -28,7 +31,7 @@ class CustomButton extends StatelessWidget {
            buttonText,
             style: MyTheme.regularTextStyle(
                 color: MyTheme.white,
-                textSize: Get.height * .020,
+                textSize:textsize==null? Get.height * .020:textsize,
                 fontWeight: FontWeight.w600),
           ),
         ),
