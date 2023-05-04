@@ -35,6 +35,8 @@ abstract class AssetHelper {
 
   static get Search => Icon('search.png');
 
+  static get calender => Icon('AlternateCalendar (2).png');
+
 //--------------------------------------------------
 
   static get SalesExecutive => Image('Salesexecutive.png');

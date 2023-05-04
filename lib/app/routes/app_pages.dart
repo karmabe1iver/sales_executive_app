@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
 
-
 import '../modules/Dashboard/bindings/dashboard_binding.dart';
 import '../modules/Dashboard/views/dashboard_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/orders/bindings/orders_binding.dart';
+import '../modules/orders/views/orders_view.dart';
 import '../modules/profile_details/bindings/profile_details_binding.dart';
 import '../modules/profile_details/views/profile_details_view.dart';
 import '../modules/shop/bindings/shop_binding.dart';
@@ -45,10 +46,16 @@ class AppPages {
       name: _Paths.ADD_SHOP,
       page: () => const AddShopView(),
       binding: ShopBinding(),
-    ), GetPage(
+    ),
+    GetPage(
       name: _Paths.SHOP_LIST,
       page: () => const ShopList(),
       binding: ShopBinding(),
+    ),
+    GetPage(
+      name: _Paths.ORDERS,
+      page: () => const OrdersView(),
+      binding: OrdersBinding(),
     ),
   ];
 }

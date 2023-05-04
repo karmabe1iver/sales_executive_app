@@ -21,4 +21,24 @@ class MyTheme {
       letterSpacing: letterSpacing,
     );
   }
+   static BoxShadow regularBoxShadow(){
+     return BoxShadow(
+       offset: Offset.zero,
+       color: Colors.black26,
+       blurStyle: BlurStyle.outer,
+       blurRadius: 10,
+     );
+
+  }
+  static BoxDecoration regularBoxDecoration(){
+    return  BoxDecoration(borderRadius:BorderRadius.only(topLeft: Radius.circular(60)),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset.zero,
+            color: Colors.grey.shade300,
+            blurStyle: BlurStyle.outer,
+            blurRadius: 10,
+          )
+        ]);
+  }
 }
